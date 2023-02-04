@@ -1,0 +1,48 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  border-bottom: 2px solid black;
+}
+
+.navBar{
+  width: 90%;
+  margin: 15px 0;
+
+}
+
+.restaurantSection{
+  display: flex;
+  justify-content: center;
+}
+
+.restaurantBody{
+  width: 80%;
+  border: 2px solid rebeccapurple;
+  margin: 15px 0;
+}
+.restaurantBody h3{
+  text-align: center;
+  border: 2px solid red;
+  background-color:aliceblue;
+  padding: 5px 0px;
+}
+
+.menuBody{
+  border: 1px solid orange;
+  margin: 5px;
+}
+
+.categoryBox{
+  text-align: center;
+  padding: 10px 0;
+  border: 1px solid crimson;
+}
+
+.buttonSection{
+  display: flex;
+  justify-content: center;
+}
