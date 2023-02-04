@@ -40,9 +40,17 @@
   text-align: center;
   padding: 10px 0;
   border: 1px solid crimson;
+
+}
+.categoryBox:hover{
+  background-color: lightgrey;
 }
 
 .buttonSection{
   display: flex;
   justify-content: center;
+}
+
+.itemBox:hover{
+  background-color: rgb(243, 237, 237);
 }

@@ -1,7 +1,14 @@
-import {useParams} from 'react-router-dom';
+import {useParams, useNavigate} from 'react-router-dom';
+
 
 const ItemList = ({menu}) => {
     const {id} = useParams();
+    const navigate = useNavigate();
+
+
+    const clickHandler = (categId, id) => {
+        navigate(`/item/${categId}/${id}`);
+    }
 
     return(
         <>
@@ -18,7 +25,7 @@ const ItemList = ({menu}) => {
                     {
                         menu.filter((category) => category.id == id).map(categ => (
                             categ.categoryItems.map((item) => (
-                                <div>
+                                <div className='itemBox' onClick={() => clickHandler(id,item.id)}>
                                     <h1>{item.name}</h1>
                                     <p>{item.description}</p>
                                     <p>{item.price}</p>
