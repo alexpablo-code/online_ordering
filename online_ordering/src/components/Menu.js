@@ -25,10 +25,6 @@ const Menu = ({menu}) => {
                             </div>
                         ))
                     }
-                    <div className='buttonSection'>
-                        <Link to= "/"><button>Add Category</button></Link>
-                    </div>
-
                 </div>
 
             </div>

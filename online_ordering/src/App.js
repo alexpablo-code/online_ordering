@@ -5,9 +5,9 @@ import './App.css';
 import Header from './components/Header';
 import Menu from './components/Menu';
 import ItemList from './components/ItemList';
+import MenuItem from './components/MenuItem';
 import NotFound from './components/NotFound';
-import MenuContainer from './components/MenuContainer';
-import Categories from './components/Categories';
+
 
 function App() {
   const [categories, setCategories] = useState(["appetizers", "entrees", "pastas", "dessert", "drinks"])
@@ -87,11 +87,11 @@ function App() {
       <Header/>
       {/* we have the header component outside the Routes tags becauuse we want it on every route */}
       
-      <MenuContainer menu={menu}>
+      {/* <MenuContainer menu={menu}>
         <Routes>
           <Route path="/" element={<Categories menu={menu}/>}/>
         </Routes>
-      </MenuContainer>
+      </MenuContainer> */}
       {/*I am trying to reuse the menucontainer component and adding routes inside*/}
 
         <Routes>
@@ -106,6 +106,8 @@ function App() {
             <ItemList menu = {menu}/>
             </>
           }/>
+          <Route path="/item/:categId/:itemId" element={<MenuItem menu={menu}/>}/>
+
           <Route path="*" element={<NotFound/>} />
         </Routes>
       

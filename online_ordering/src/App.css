@@ -54,3 +54,19 @@
 .itemBox:hover{
   background-color: rgb(243, 237, 237);
 }
+
+.objCenter{
+  display: flex;
+  justify-content: center;
+}
+
+
+.textCenter{
+  text-align: center;
+  margin: 15px 5px;
+}
+
+.itemPrice{
+  font-size: 20px;
+  font-weight: bold;
+}
