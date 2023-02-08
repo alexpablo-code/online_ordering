@@ -1,5 +1,6 @@
 import {BrowserRouter, Routes, Route, Link, useParams} from 'react-router-dom';
-import {useState} from 'react';
+import {useState, useEffect} from 'react';
+import axios from 'axios';
 
 import './App.css';
 import Header from './components/Header';
@@ -10,7 +11,7 @@ import NotFound from './components/NotFound';
 
 
 function App() {
-  const [categories, setCategories] = useState(["appetizers", "entrees", "pastas", "dessert", "drinks"])
+  const[menuDb, setMenuDb] = useState()
   const[menu, setMenu] = useState([
     {
       id:234,
@@ -79,7 +80,12 @@ function App() {
     }
   ])
 
-
+useEffect(() => {
+  axios.get('https:localhost:8000/menu')
+  .then((response) => {
+    console.log(response);
+  })
+}, [])
 
   return (
     <BrowserRouter>
@@ -93,6 +99,7 @@ function App() {
         </Routes>
       </MenuContainer> */}
       {/*I am trying to reuse the menucontainer component and adding routes inside*/}
+      
 
         <Routes>
           <Route path="/" element={
